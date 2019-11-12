@@ -7,3 +7,6 @@ Smiles Format Ref: http://opensmiles.org/opensmiles.pdf
 To avoid left recursive, some entry is changed according to https://metamolecular.com/cheminformatics/smiles/railroad-diagram/
 
 Element Symbols is organized by length & frequency in grammar file. To re-generate parser, run `canopy smiles.peg --lang python`
+
+
+To use this repo, take a look in `./sample`, you will get a grammar tree when you parse your smiles, do what you want
