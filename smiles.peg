@@ -12,7 +12,7 @@ symbol        <- ELEMENT_SYMBOLS
 
 chiral <- ( "@TB" / "@OH" ) DIGIT? DIGIT / "@SP" [1-3] / ("@AL" / "@TH") [1-2] / "@@" / "@" 
 hcount <- "H" DIGIT?
-charge <- ( "-" / "+" ) ( DIGIT? DIGIT )? 
+charge <- ( "-" / "+" ) ( DIGIT DIGIT? )? 
 clazz  <- ":" NUMBER 
 
 ALIPHATIC_ORGANIC <-  "Cl" / "Br" / "B" / "C" / "N" / "O" / "S" / "P" / "F" / "I" 

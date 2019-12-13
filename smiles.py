@@ -40,7 +40,7 @@ class TreeNode4(TreeNode):
 class TreeNode5(TreeNode):
     def __init__(self, text, offset, elements):
         super(TreeNode5, self).__init__(text, offset, elements)
-        self.DIGIT = elements[1]
+        self.DIGIT = elements[0]
 
 
 class TreeNode6(TreeNode):
@@ -758,15 +758,15 @@ class Grammar(object):
             index3 = self._offset
             index4, elements1 = self._offset, []
             address3 = FAILURE
-            index5 = self._offset
             address3 = self._read_DIGIT()
-            if address3 is FAILURE:
-                address3 = TreeNode(self._input[index5:index5], index5)
-                self._offset = index5
             if address3 is not FAILURE:
                 elements1.append(address3)
                 address4 = FAILURE
+                index5 = self._offset
                 address4 = self._read_DIGIT()
+                if address4 is FAILURE:
+                    address4 = TreeNode(self._input[index5:index5], index5)
+                    self._offset = index5
                 if address4 is not FAILURE:
                     elements1.append(address4)
                 else:
